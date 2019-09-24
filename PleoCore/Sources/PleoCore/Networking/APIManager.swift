@@ -48,5 +48,32 @@ public struct APIManager {
         return request
     }
     
+    /**
+    * Updates the comment of an expense
+    * - parameter id: The ID of the expense to be updated
+    * - parameter comment: The comment to include in the expense
+    * - parameter completion: A completion block to allow error handling if the request fails
+    */
+    @discardableResult
+    public static func updateExpense(id: String, comment: String, completion: @escaping (AFDataResponse<Data?>) -> Void) -> Request {
+        let url = baseURL + "/expenses/\(id)"
+        let params = ["comment": comment]
+        let request = session.request(url, method: .post, parameters: params).response { (response) in
+            completion(response)
+        }
+        return request
+    }
+    
+    @discardableResult
+    public static func uploadImageToExpense(id: String, imageFilePath: URL, completion: @escaping (AFDataResponse<Data?>) -> Void) {
+        let url = baseURL + "/expenses/\(id)/receipts"
+        let request = session.upload(multipartFormData: { (multipartFormData) in
+            multipartFormData.append(imageFilePath, withName: "receipt")
+        }, to: url)
+            .response { (response) in
+            completion(response)
+        }
+    }
+    
 }
 

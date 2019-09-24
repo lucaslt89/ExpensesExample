@@ -15,9 +15,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        APIManager.getExpenses(limit: 10, offset: 0) { (response) in
-            print(response.value?.expenses ?? "")
-        }
     }
 
 

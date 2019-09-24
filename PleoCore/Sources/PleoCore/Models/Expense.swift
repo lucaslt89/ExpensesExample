@@ -13,7 +13,7 @@ public class Expense : NSObject, Codable {
     public let amount: Amount?
     public let date: Date?
     public let merchant: String?
-    public let receipts: [String]?
+    public let receipts: [ReceiptImage]?
     public let comment: String?
     public let category: String?
     public let user: User?
@@ -26,7 +26,7 @@ public class Expense : NSObject, Codable {
         amount: \(amount?.value ?? "") - \(amount?.currency ?? "")
         date: \(date ?? Date.distantPast)
         merchant: \(merchant ?? "")
-        receipts: \(receipts ?? [])
+        receipts: \(receipts?.map{$0.absoluteURL} ?? [])
         comment: \(comment ?? "")
         category: \(category ?? "")
         user: \(user?.first ?? "") \(user?.last ?? "") - \(user?.email ?? "")
