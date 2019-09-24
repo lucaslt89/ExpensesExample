@@ -65,7 +65,7 @@ public struct APIManager {
     }
     
     @discardableResult
-    public static func uploadImageToExpense(id: String, imageFilePath: URL, completion: @escaping (AFDataResponse<Data?>) -> Void) {
+    public static func uploadImageToExpense(id: String, imageFilePath: URL, completion: @escaping (AFDataResponse<Data?>) -> Void) -> Request {
         let url = baseURL + "/expenses/\(id)/receipts"
         let request = session.upload(multipartFormData: { (multipartFormData) in
             multipartFormData.append(imageFilePath, withName: "receipt")
@@ -73,6 +73,7 @@ public struct APIManager {
             .response { (response) in
             completion(response)
         }
+        return request
     }
     
 }

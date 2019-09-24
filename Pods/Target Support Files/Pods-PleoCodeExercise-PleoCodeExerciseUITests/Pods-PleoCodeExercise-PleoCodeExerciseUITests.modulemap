@@ -1,0 +1,6 @@
+framework module Pods_PleoCodeExercise_PleoCodeExerciseUITests {
+  umbrella header "Pods-PleoCodeExercise-PleoCodeExerciseUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

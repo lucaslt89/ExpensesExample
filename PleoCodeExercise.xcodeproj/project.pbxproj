@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166B9F779535EBFB7955969F /* Pods_PleoCodeExercise_PleoCodeExerciseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA722A8394E83CA5EB8EAD00 /* Pods_PleoCodeExercise_PleoCodeExerciseUITests.framework */; };
+		4302251D438B9E160100F743 /* Pods_PleoCodeExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABD80830AD2A5D9E4A4BFB8 /* Pods_PleoCodeExercise.framework */; };
+		54F1400F6AC14B060AFE2A4B /* Pods_PleoCodeExerciseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D0EAAEAAB470E746E98FF5 /* Pods_PleoCodeExerciseTests.framework */; };
 		C70DF9F3233A8F8900626319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF9F2233A8F8900626319 /* AppDelegate.swift */; };
 		C70DF9F5233A8F8900626319 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF9F4233A8F8900626319 /* SceneDelegate.swift */; };
-		C70DF9F7233A8F8900626319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF9F6233A8F8900626319 /* ViewController.swift */; };
+		C70DF9F7233A8F8900626319 /* ExpensesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DF9F6233A8F8900626319 /* ExpensesListViewController.swift */; };
 		C70DF9FA233A8F8900626319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70DF9F8233A8F8900626319 /* Main.storyboard */; };
 		C70DF9FC233A8F8A00626319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C70DF9FB233A8F8A00626319 /* Assets.xcassets */; };
 		C70DF9FF233A8F8A00626319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70DF9FD233A8F8A00626319 /* LaunchScreen.storyboard */; };
 		C70DFA0A233A8F8B00626319 /* PleoCodeExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DFA09233A8F8B00626319 /* PleoCodeExerciseTests.swift */; };
 		C70DFA15233A8F8B00626319 /* PleoCodeExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70DFA14233A8F8B00626319 /* PleoCodeExerciseUITests.swift */; };
 		C70DFA25233A915700626319 /* PleoCore in Frameworks */ = {isa = PBXBuildFile; productRef = C70DFA24233A915700626319 /* PleoCore */; };
+		C7732566233AC91500B28A42 /* DateFormatter+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7732565233AC91500B28A42 /* DateFormatter+Helpers.swift */; };
+		C7732568233AC9E400B28A42 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7732567233AC9E400B28A42 /* ExpenseViewModel.swift */; };
+		C7732570233AD62A00B28A42 /* FullScreenImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773256F233AD62A00B28A42 /* FullScreenImagesViewController.swift */; };
+		C7A414A0233AC2DD0064AD67 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A4149F233AC2DD0064AD67 /* ExpenseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +43,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06689039E53F86BBFCC769A0 /* Pods-PleoCodeExercise-PleoCodeExerciseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleoCodeExercise-PleoCodeExerciseUITests.debug.xcconfig"; path = "Target Support Files/Pods-PleoCodeExercise-PleoCodeExerciseUITests/Pods-PleoCodeExercise-PleoCodeExerciseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0E9B903EDFB8FFEE302D9862 /* Pods-PleoCodeExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleoCodeExercise.debug.xcconfig"; path = "Target Support Files/Pods-PleoCodeExercise/Pods-PleoCodeExercise.debug.xcconfig"; sourceTree = "<group>"; };
+		27D0EAAEAAB470E746E98FF5 /* Pods_PleoCodeExerciseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PleoCodeExerciseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		493A38DD078873EC90A40E3C /* Pods-PleoCodeExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleoCodeExercise.release.xcconfig"; path = "Target Support Files/Pods-PleoCodeExercise/Pods-PleoCodeExercise.release.xcconfig"; sourceTree = "<group>"; };
+		7ADB810539F02C98543EE8C3 /* Pods-PleoCodeExercise-PleoCodeExerciseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleoCodeExercise-PleoCodeExerciseUITests.release.xcconfig"; path = "Target Support Files/Pods-PleoCodeExercise-PleoCodeExerciseUITests/Pods-PleoCodeExercise-PleoCodeExerciseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8216CC3B3B58682DC2567D0C /* Pods-PleoCodeExerciseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleoCodeExerciseTests.release.xcconfig"; path = "Target Support Files/Pods-PleoCodeExerciseTests/Pods-PleoCodeExerciseTests.release.xcconfig"; sourceTree = "<group>"; };
+		8ABD80830AD2A5D9E4A4BFB8 /* Pods_PleoCodeExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PleoCodeExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B89542A4F87DEA4CEF0B7559 /* Pods-PleoCodeExerciseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PleoCodeExerciseTests.debug.xcconfig"; path = "Target Support Files/Pods-PleoCodeExerciseTests/Pods-PleoCodeExerciseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C70DF9EF233A8F8900626319 /* PleoCodeExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PleoCodeExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70DF9F2233A8F8900626319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C70DF9F4233A8F8900626319 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C70DF9F6233A8F8900626319 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C70DF9F6233A8F8900626319 /* ExpensesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewController.swift; sourceTree = "<group>"; };
 		C70DF9F9233A8F8900626319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C70DF9FB233A8F8A00626319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C70DF9FE233A8F8A00626319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +66,11 @@
 		C70DFA14233A8F8B00626319 /* PleoCodeExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PleoCodeExerciseUITests.swift; sourceTree = "<group>"; };
 		C70DFA16233A8F8B00626319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C70DFA22233A8FC000626319 /* PleoCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PleoCore; sourceTree = "<group>"; };
+		C7732565233AC91500B28A42 /* DateFormatter+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Helpers.swift"; sourceTree = "<group>"; };
+		C7732567233AC9E400B28A42 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
+		C773256F233AD62A00B28A42 /* FullScreenImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImagesViewController.swift; sourceTree = "<group>"; };
+		C7A4149F233AC2DD0064AD67 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		CA722A8394E83CA5EB8EAD00 /* Pods_PleoCodeExercise_PleoCodeExerciseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PleoCodeExercise_PleoCodeExerciseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70DFA25233A915700626319 /* PleoCore in Frameworks */,
+				4302251D438B9E160100F743 /* Pods_PleoCodeExercise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F1400F6AC14B060AFE2A4B /* Pods_PleoCodeExerciseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +95,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				166B9F779535EBFB7955969F /* Pods_PleoCodeExercise_PleoCodeExerciseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC60C1D3AD74F3E3C232DFD8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E9B903EDFB8FFEE302D9862 /* Pods-PleoCodeExercise.debug.xcconfig */,
+				493A38DD078873EC90A40E3C /* Pods-PleoCodeExercise.release.xcconfig */,
+				06689039E53F86BBFCC769A0 /* Pods-PleoCodeExercise-PleoCodeExerciseUITests.debug.xcconfig */,
+				7ADB810539F02C98543EE8C3 /* Pods-PleoCodeExercise-PleoCodeExerciseUITests.release.xcconfig */,
+				B89542A4F87DEA4CEF0B7559 /* Pods-PleoCodeExerciseTests.debug.xcconfig */,
+				8216CC3B3B58682DC2567D0C /* Pods-PleoCodeExerciseTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C70DF9E6233A8F8900626319 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +124,7 @@
 				C70DFA13233A8F8B00626319 /* PleoCodeExerciseUITests */,
 				C70DF9F0233A8F8900626319 /* Products */,
 				C70DFA23233A915700626319 /* Frameworks */,
+				AC60C1D3AD74F3E3C232DFD8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,9 +141,12 @@
 		C70DF9F1233A8F8900626319 /* PleoCodeExercise */ = {
 			isa = PBXGroup;
 			children = (
+				C7732564233AC8FD00B28A42 /* Helpers */,
+				C7A4149D233AC2C50064AD67 /* Views */,
+				C7A4149B233AC1650064AD67 /* ViewModels */,
+				C7A4149A233AC15B0064AD67 /* ViewControllers */,
 				C70DF9F2233A8F8900626319 /* AppDelegate.swift */,
 				C70DF9F4233A8F8900626319 /* SceneDelegate.swift */,
-				C70DF9F6233A8F8900626319 /* ViewController.swift */,
 				C70DF9F8233A8F8900626319 /* Main.storyboard */,
 				C70DF9FB233A8F8A00626319 /* Assets.xcassets */,
 				C70DF9FD233A8F8A00626319 /* LaunchScreen.storyboard */,
@@ -136,8 +176,68 @@
 		C70DFA23233A915700626319 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8ABD80830AD2A5D9E4A4BFB8 /* Pods_PleoCodeExercise.framework */,
+				CA722A8394E83CA5EB8EAD00 /* Pods_PleoCodeExercise_PleoCodeExerciseUITests.framework */,
+				27D0EAAEAAB470E746E98FF5 /* Pods_PleoCodeExerciseTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7732564233AC8FD00B28A42 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C7732565233AC91500B28A42 /* DateFormatter+Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C773256E233AD61700B28A42 /* FullScreenImages */ = {
+			isa = PBXGroup;
+			children = (
+				C773256F233AD62A00B28A42 /* FullScreenImagesViewController.swift */,
+			);
+			path = FullScreenImages;
+			sourceTree = "<group>";
+		};
+		C7A4149A233AC15B0064AD67 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C773256E233AD61700B28A42 /* FullScreenImages */,
+				C7A4149C233AC26F0064AD67 /* ExpensesList */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C7A4149B233AC1650064AD67 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C7732567233AC9E400B28A42 /* ExpenseViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C7A4149C233AC26F0064AD67 /* ExpensesList */ = {
+			isa = PBXGroup;
+			children = (
+				C70DF9F6233A8F8900626319 /* ExpensesListViewController.swift */,
+			);
+			path = ExpensesList;
+			sourceTree = "<group>";
+		};
+		C7A4149D233AC2C50064AD67 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7A4149E233AC2CA0064AD67 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C7A4149E233AC2CA0064AD67 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C7A4149F233AC2DD0064AD67 /* ExpenseTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C70DFA19233A8F8B00626319 /* Build configuration list for PBXNativeTarget "PleoCodeExercise" */;
 			buildPhases = (
+				CC7D64F12D6CCB2BCFAD2869 /* [CP] Check Pods Manifest.lock */,
 				C70DF9EB233A8F8900626319 /* Sources */,
 				C70DF9EC233A8F8900626319 /* Frameworks */,
 				C70DF9ED233A8F8900626319 /* Resources */,
+				2F1E4F68863607E53C31C8BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +269,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C70DFA1C233A8F8B00626319 /* Build configuration list for PBXNativeTarget "PleoCodeExerciseTests" */;
 			buildPhases = (
+				8EC2ED9E5908528A05E3FE6A /* [CP] Check Pods Manifest.lock */,
 				C70DFA01233A8F8B00626319 /* Sources */,
 				C70DFA02233A8F8B00626319 /* Frameworks */,
 				C70DFA03233A8F8B00626319 /* Resources */,
@@ -185,9 +288,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C70DFA1F233A8F8B00626319 /* Build configuration list for PBXNativeTarget "PleoCodeExerciseUITests" */;
 			buildPhases = (
+				D453E386166A0969041ED2E0 /* [CP] Check Pods Manifest.lock */,
 				C70DFA0C233A8F8B00626319 /* Sources */,
 				C70DFA0D233A8F8B00626319 /* Frameworks */,
 				C70DFA0E233A8F8B00626319 /* Resources */,
+				F4EE14D6913409278BA1ADB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,12 +374,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F1E4F68863607E53C31C8BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PleoCodeExercise/Pods-PleoCodeExercise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PleoCodeExercise/Pods-PleoCodeExercise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PleoCodeExercise/Pods-PleoCodeExercise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC2ED9E5908528A05E3FE6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PleoCodeExerciseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC7D64F12D6CCB2BCFAD2869 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PleoCodeExercise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D453E386166A0969041ED2E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PleoCodeExercise-PleoCodeExerciseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4EE14D6913409278BA1ADB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PleoCodeExercise-PleoCodeExerciseUITests/Pods-PleoCodeExercise-PleoCodeExerciseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PleoCodeExercise-PleoCodeExerciseUITests/Pods-PleoCodeExercise-PleoCodeExerciseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PleoCodeExercise-PleoCodeExerciseUITests/Pods-PleoCodeExercise-PleoCodeExerciseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C70DF9EB233A8F8900626319 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C70DF9F7233A8F8900626319 /* ViewController.swift in Sources */,
+				C7732566233AC91500B28A42 /* DateFormatter+Helpers.swift in Sources */,
+				C7732568233AC9E400B28A42 /* ExpenseViewModel.swift in Sources */,
+				C7A414A0233AC2DD0064AD67 /* ExpenseTableViewCell.swift in Sources */,
+				C70DF9F7233A8F8900626319 /* ExpensesListViewController.swift in Sources */,
+				C7732570233AD62A00B28A42 /* FullScreenImagesViewController.swift in Sources */,
 				C70DF9F3233A8F8900626319 /* AppDelegate.swift in Sources */,
 				C70DF9F5233A8F8900626319 /* SceneDelegate.swift in Sources */,
 			);
@@ -447,6 +659,7 @@
 		};
 		C70DFA1A233A8F8B00626319 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E9B903EDFB8FFEE302D9862 /* Pods-PleoCodeExercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +679,7 @@
 		};
 		C70DFA1B233A8F8B00626319 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 493A38DD078873EC90A40E3C /* Pods-PleoCodeExercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,8 +699,8 @@
 		};
 		C70DFA1D233A8F8B00626319 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B89542A4F87DEA4CEF0B7559 /* Pods-PleoCodeExerciseTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UBSCZVW6E;
@@ -507,8 +721,8 @@
 		};
 		C70DFA1E233A8F8B00626319 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8216CC3B3B58682DC2567D0C /* Pods-PleoCodeExerciseTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UBSCZVW6E;
@@ -529,8 +743,8 @@
 		};
 		C70DFA20233A8F8B00626319 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06689039E53F86BBFCC769A0 /* Pods-PleoCodeExercise-PleoCodeExerciseUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UBSCZVW6E;
 				INFOPLIST_FILE = PleoCodeExerciseUITests/Info.plist;
@@ -549,8 +763,8 @@
 		};
 		C70DFA21233A8F8B00626319 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ADB810539F02C98543EE8C3 /* Pods-PleoCodeExercise-PleoCodeExerciseUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UBSCZVW6E;
 				INFOPLIST_FILE = PleoCodeExerciseUITests/Info.plist;

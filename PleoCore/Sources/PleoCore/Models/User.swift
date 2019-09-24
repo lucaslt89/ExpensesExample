@@ -9,8 +9,8 @@ import Foundation
 
 public class User : Codable {
     
-    public let first : String?
-    public let last : String?
-    public let email : String?
+    public let first : String!
+    public let last : String!
+    public let email : String!
     
 }

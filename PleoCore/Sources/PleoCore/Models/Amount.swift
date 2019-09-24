@@ -8,6 +8,6 @@
 import Foundation
 
 public class Amount : Codable {
-    public let value : String?
-    public let currency : String?
+    public let value : String!
+    public let currency : String!
 }
