@@ -19,15 +19,18 @@ class ExpensesListViewController: UIViewController {
     
     // MARK: UIViewLifecycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadExpenses()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadExpenses(offset: 0)
     }
     
     // MARK: Private Helpers
     
-    private func loadExpenses() {
-        APIManager.getExpenses(limit: pageSize, offset: expenses.count) { (response) in
+    private func loadExpenses(offset: Int) {
+        if offset == 0 {
+            expenses = []
+        }
+        APIManager.getExpenses(limit: pageSize, offset: offset) { (response) in
             switch response.result {
             case let .success(expenseReport):
                 let expensesViewModels = expenseReport.expenses!.map{ExpenseViewModel(expense: $0)}
@@ -37,18 +40,6 @@ class ExpensesListViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
-    }
-    
-    private func addCommentToExpense(id: String) {
-        
-    }
-    
-    private func uploadImageFromCameraToExpense(id: String) {
-        
-    }
-    
-    private func uploadImageFromLibraryToExpense(id: String) {
-        
     }
 
 }
@@ -78,7 +69,7 @@ extension ExpensesListViewController : ExpenseTableViewCellDelegate {
     func didTapExpenseEdit(expenseID: String) {
         guard let editExpenseVC = storyboard?.instantiateViewController(identifier: "EditExpenseViewController") as? EditExpenseViewController else { return }
         editExpenseVC.expenseId = expenseID
-        editExpenseVC.modalPresentationStyle = .overFullScreen
+        editExpenseVC.modalPresentationStyle = .fullScreen
         present(editExpenseVC, animated: true, completion: nil)
     }
     
