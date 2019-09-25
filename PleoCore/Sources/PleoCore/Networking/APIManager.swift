@@ -16,7 +16,7 @@ import Alamofire
 public struct APIManager {
     
     static let session = Alamofire.Session()
-    static let baseURL = "http://localhost:3000"
+    static let baseURL = "http://192.168.100.44:3000"
     static var decoder : JSONDecoder {
         let customDecoder = JSONDecoder()
         customDecoder.dateDecodingStrategy = .custom({ (decoder) -> Date in

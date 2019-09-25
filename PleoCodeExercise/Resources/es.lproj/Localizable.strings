@@ -3,3 +3,7 @@
 "add_receipt_camera" = "Subir Foto desde la Cámara";
 "add_receipt_library" = "Subir Imagen de la Librería";
 "cancel" = "Cancelar";
+"filters" = "Elegir Filtro";
+"show_expenses_with_image" = "Gastos con Imágenes";
+"show_expenses_with_comments" = "Gastos con Comentarios";
+"show_all_expenses" = "Todos los Gastos";

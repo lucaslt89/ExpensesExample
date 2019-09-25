@@ -14,6 +14,8 @@ import Alamofire
 class ExpensesListViewController: UIViewController {
     
     var expenses : [ExpenseViewModel] = []
+    var filteredExpenses : [ExpenseViewModel] = []
+    var filterApplied = false
     var limitReached = false
     let pageSize : Int = 10
     var ongoingRequest : Request?
@@ -41,36 +43,79 @@ class ExpensesListViewController: UIViewController {
                 let expensesViewModels = expenseReport.expenses!.map{ExpenseViewModel(expense: $0)}
                 self.expenses += expensesViewModels
                 self.limitReached = self.expenses.count == expenseReport.total
-                self.tableView.reloadData()
+                self.showAllExpenses()
             case let .failure(error):
                 print(error.localizedDescription)
             }
         }
     }
-
+    
+    // MARK: Button Actions
+    
+    @IBAction func filtersButtonPressed(_ sender: Any) {
+        let alertView = UIAlertController(title: NSLocalizedString("filters", comment: ""), message: nil, preferredStyle: .actionSheet)
+        let receiptsWithImageAction = UIAlertAction(title: NSLocalizedString("show_expenses_with_image", comment: ""), style: .default) { (action) in
+            self.showExpensesWithImages()
+        }
+        let receiptsWithCommentAction = UIAlertAction(title: NSLocalizedString("show_expenses_with_comments", comment: ""), style: .default) { (action) in
+            self.showExpensesWithComments()
+        }
+        let allReceiptsAction = UIAlertAction(title: NSLocalizedString("show_all_expenses", comment: ""), style: .default) { (action) in
+            self.showAllExpenses()
+        }
+        
+        alertView.addAction(receiptsWithImageAction)
+        alertView.addAction(receiptsWithCommentAction)
+        alertView.addAction(allReceiptsAction)
+        present(alertView, animated: true, completion: nil)
+    }
+    
+    // MARK: - Filters methods -
+    
+    private func showExpensesWithImages() {
+        filteredExpenses = expenses.filter { $0.receiptsURLs.count > 0 }
+        filterApplied = true
+        tableView.reloadData()
+    }
+    
+    private func showExpensesWithComments() {
+        filteredExpenses = expenses.filter { !$0.comment.isEmpty }
+        filterApplied = true
+        tableView.reloadData()
+    }
+    
+    private func showAllExpenses() {
+        filteredExpenses = expenses
+        filterApplied = false
+        tableView.reloadData()
+    }
 }
 
 extension ExpensesListViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return expenses.count
+        return filteredExpenses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpenseTableViewCell.identifier) as? ExpenseTableViewCell else { return UITableViewCell() }
-        cell.setupWithExpense(expenses[indexPath.row])
+        cell.setupWithExpense(filteredExpenses[indexPath.row])
         cell.delegate = self
         return cell
     }
     
     /**
      * This is a very simple solution to implement infinite scrolling since the API response is quite fast. A better solution would be to add a mock cell at the end with an activity indicator, and when that cell appears we load the next page. We could also use tableView:willDisplay:forRowAt: method.
+     *
+     * Note: Since the filters are applied locally, we only request more pages if we're showing all the expenses, otherwise we might have unexpected results like getting expenses from the API and not displaying anything because they're filtered.
      */
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let actualPosition = scrollView.contentOffset.y
-        let contentHeightTrigger = scrollView.contentSize.height - 100 - tableView.bounds.height
-        if actualPosition >= contentHeightTrigger && ongoingRequest == nil && !limitReached {
-            loadExpenses(offset: expenses.count)
+        if !filterApplied {
+            let actualPosition = scrollView.contentOffset.y
+            let contentHeightTrigger = scrollView.contentSize.height - 100 - tableView.bounds.height
+            if actualPosition >= contentHeightTrigger && ongoingRequest == nil && !limitReached {
+                loadExpenses(offset: expenses.count)
+            }
         }
     }
     

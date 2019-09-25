@@ -3,3 +3,7 @@
 "add_receipt_camera" = "Add Image From Camera";
 "add_receipt_library" = "Add Image From Library";
 "cancel" = "Cancel";
+"filters" = "Chose Filter";
+"show_expenses_with_image" = "Expenses with Images";
+"show_expenses_with_comments" = "Expenses with Comments";
+"show_all_expenses" = "All Expenses";
