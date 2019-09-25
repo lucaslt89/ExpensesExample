@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Merchant Title"; ObjectID = "a9d-Qv-qHA"; */
+"a9d-Qv-qHA.text" = "Merchant Title";
+
+/* Class = "UILabel"; text = "This is a comment"; ObjectID = "abZ-qN-gdd"; */
+"abZ-qN-gdd.text" = "This is a comment";
+
+/* Class = "UILabel"; text = "10.00 EUR - Dec. 25th 2019"; ObjectID = "mwL-RN-k3t"; */
+"mwL-RN-k3t.text" = "10.00 EUR - Dec. 25th 2019";
+
+/* Class = "UILabel"; text = "First Last name - Email"; ObjectID = "nTr-i9-Alu"; */
+"nTr-i9-Alu.text" = "First Last name - Email";

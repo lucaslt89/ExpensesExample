@@ -22,6 +22,8 @@
 		C7732566233AC91500B28A42 /* DateFormatter+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7732565233AC91500B28A42 /* DateFormatter+Helpers.swift */; };
 		C7732568233AC9E400B28A42 /* ExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7732567233AC9E400B28A42 /* ExpenseViewModel.swift */; };
 		C7732570233AD62A00B28A42 /* FullScreenImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773256F233AD62A00B28A42 /* FullScreenImagesViewController.swift */; };
+		C7732574233ADA9A00B28A42 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7732576233ADA9A00B28A42 /* Localizable.strings */; };
+		C773257C233AE12C00B28A42 /* EditExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C773257B233AE12C00B28A42 /* EditExpenseViewController.swift */; };
 		C7A414A0233AC2DD0064AD67 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A4149F233AC2DD0064AD67 /* ExpenseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,11 @@
 		C7732565233AC91500B28A42 /* DateFormatter+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Helpers.swift"; sourceTree = "<group>"; };
 		C7732567233AC9E400B28A42 /* ExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewModel.swift; sourceTree = "<group>"; };
 		C773256F233AD62A00B28A42 /* FullScreenImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImagesViewController.swift; sourceTree = "<group>"; };
+		C7732575233ADA9A00B28A42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C7732577233ADADC00B28A42 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		C7732578233ADADC00B28A42 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C7732579233ADADC00B28A42 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C773257B233AE12C00B28A42 /* EditExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditExpenseViewController.swift; sourceTree = "<group>"; };
 		C7A4149F233AC2DD0064AD67 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
 		CA722A8394E83CA5EB8EAD00 /* Pods_PleoCodeExercise_PleoCodeExerciseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PleoCodeExercise_PleoCodeExerciseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +148,7 @@
 		C70DF9F1233A8F8900626319 /* PleoCodeExercise */ = {
 			isa = PBXGroup;
 			children = (
+				C7732571233ADA6D00B28A42 /* Resources */,
 				C7732564233AC8FD00B28A42 /* Helpers */,
 				C7A4149D233AC2C50064AD67 /* Views */,
 				C7A4149B233AC1650064AD67 /* ViewModels */,
@@ -148,7 +156,6 @@
 				C70DF9F2233A8F8900626319 /* AppDelegate.swift */,
 				C70DF9F4233A8F8900626319 /* SceneDelegate.swift */,
 				C70DF9F8233A8F8900626319 /* Main.storyboard */,
-				C70DF9FB233A8F8A00626319 /* Assets.xcassets */,
 				C70DF9FD233A8F8A00626319 /* LaunchScreen.storyboard */,
 				C70DFA00233A8F8A00626319 /* Info.plist */,
 			);
@@ -199,9 +206,27 @@
 			path = FullScreenImages;
 			sourceTree = "<group>";
 		};
+		C7732571233ADA6D00B28A42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C70DF9FB233A8F8A00626319 /* Assets.xcassets */,
+				C7732576233ADA9A00B28A42 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C773257A233AE11E00B28A42 /* EditExpense */ = {
+			isa = PBXGroup;
+			children = (
+				C773257B233AE12C00B28A42 /* EditExpenseViewController.swift */,
+			);
+			path = EditExpense;
+			sourceTree = "<group>";
+		};
 		C7A4149A233AC15B0064AD67 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C773257A233AE11E00B28A42 /* EditExpense */,
 				C773256E233AD61700B28A42 /* FullScreenImages */,
 				C7A4149C233AC26F0064AD67 /* ExpensesList */,
 			);
@@ -334,6 +359,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = C70DF9E6233A8F8900626319;
 			productRefGroup = C70DF9F0233A8F8900626319 /* Products */;
@@ -353,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70DF9FF233A8F8A00626319 /* LaunchScreen.storyboard in Resources */,
+				C7732574233ADA9A00B28A42 /* Localizable.strings in Resources */,
 				C70DF9FC233A8F8A00626319 /* Assets.xcassets in Resources */,
 				C70DF9FA233A8F8900626319 /* Main.storyboard in Resources */,
 			);
@@ -489,6 +516,7 @@
 				C7732570233AD62A00B28A42 /* FullScreenImagesViewController.swift in Sources */,
 				C70DF9F3233A8F8900626319 /* AppDelegate.swift in Sources */,
 				C70DF9F5233A8F8900626319 /* SceneDelegate.swift in Sources */,
+				C773257C233AE12C00B28A42 /* EditExpenseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +556,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C70DF9F9233A8F8900626319 /* Base */,
+				C7732577233ADADC00B28A42 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -536,8 +565,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				C70DF9FE233A8F8A00626319 /* Base */,
+				C7732578233ADADC00B28A42 /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C7732576233ADA9A00B28A42 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7732575233ADA9A00B28A42 /* en */,
+				C7732579233ADADC00B28A42 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -547,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -607,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

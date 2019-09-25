@@ -38,6 +38,18 @@ class ExpensesListViewController: UIViewController {
             }
         }
     }
+    
+    private func addCommentToExpense(id: String) {
+        
+    }
+    
+    private func uploadImageFromCameraToExpense(id: String) {
+        
+    }
+    
+    private func uploadImageFromLibraryToExpense(id: String) {
+        
+    }
 
 }
 
@@ -64,7 +76,10 @@ extension ExpensesListViewController : ExpenseTableViewCellDelegate {
     }
     
     func didTapExpenseEdit(expenseID: String) {
-        print("Edit Expense: \(expenseID)")
+        guard let editExpenseVC = storyboard?.instantiateViewController(identifier: "EditExpenseViewController") as? EditExpenseViewController else { return }
+        editExpenseVC.expenseId = expenseID
+        editExpenseVC.modalPresentationStyle = .overFullScreen
+        present(editExpenseVC, animated: true, completion: nil)
     }
     
 }
