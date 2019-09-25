@@ -17,6 +17,8 @@ class ExpenseViewModel {
         self.expense = expense
     }
     
+    var hasReceipts : Bool { receiptsURLs.count > 0 }
+    
     var merchantName : String {
         return expense.merchant
     }

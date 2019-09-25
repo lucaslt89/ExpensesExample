@@ -73,7 +73,7 @@ class ExpensesListViewController: UIViewController {
     // MARK: - Filters methods -
     
     private func showExpensesWithImages() {
-        filteredExpenses = expenses.filter { $0.receiptsURLs.count > 0 }
+        filteredExpenses = expenses.filter { $0.hasReceipts }
         filterApplied = true
         tableView.reloadData()
     }

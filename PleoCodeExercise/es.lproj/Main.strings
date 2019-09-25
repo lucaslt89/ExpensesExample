@@ -1,12 +1,21 @@
 
+/* Class = "UIButton"; normalTitle = "Filters"; ObjectID = "Ot3-pF-geI"; */
+"Ot3-pF-geI.normalTitle" = "Filtros";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "WBm-PB-fOr"; */
+"WBm-PB-fOr.normalTitle" = "Guardar";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Xyu-W6-EHJ"; */
+"Xyu-W6-EHJ.normalTitle" = "Cancelar";
+
 /* Class = "UILabel"; text = "Merchant Title"; ObjectID = "a9d-Qv-qHA"; */
-"a9d-Qv-qHA.text" = "Merchant Title";
+"a9d-Qv-qHA.text" = "Tienda";
 
 /* Class = "UILabel"; text = "This is a comment"; ObjectID = "abZ-qN-gdd"; */
-"abZ-qN-gdd.text" = "This is a comment";
+"abZ-qN-gdd.text" = "Este es un Comentario";
 
 /* Class = "UILabel"; text = "10.00 EUR - Dec. 25th 2019"; ObjectID = "mwL-RN-k3t"; */
-"mwL-RN-k3t.text" = "10.00 EUR - Dec. 25th 2019";
+"mwL-RN-k3t.text" = "10.00 EUR - Dic. 25th 2019";
 
 /* Class = "UILabel"; text = "First Last name - Email"; ObjectID = "nTr-i9-Alu"; */
-"nTr-i9-Alu.text" = "First Last name - Email";
+"nTr-i9-Alu.text" = "Primer Ultimo nombre - Email";

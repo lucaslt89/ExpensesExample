@@ -27,6 +27,12 @@ class ExpenseTableViewCell: UITableViewCell {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var imagePlaceholder: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        imageSlideshow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showFullScreenSlideshow)))
+    }
     
     func setupWithExpense(_ expense: ExpenseViewModel) {
         expenseViewModel = expense
@@ -35,11 +41,13 @@ class ExpenseTableViewCell: UITableViewCell {
         userLabel.text = expense.userDetails
         commentLabel.text = expense.comment
         imageSlideshow.setImageInputs(expense.receiptsURLs.map{SDWebImageSource(url: $0)})
-        imageSlideshow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showFullScreenSlideshow)))
+        imagePlaceholder.isHidden = expense.hasReceipts
     }
     
     @objc func showFullScreenSlideshow() {
-        delegate?.didTapExpenseSlideshow(imageSlideshow: imageSlideshow)
+        if expenseViewModel.hasReceipts {
+            delegate?.didTapExpenseSlideshow(imageSlideshow: imageSlideshow)
+        }
     }
 
     @IBAction func editButtonPressed(_ sender: Any) {
